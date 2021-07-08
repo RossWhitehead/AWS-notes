@@ -15,6 +15,19 @@
 * Storage optimized
    - High I/O to large local data sets.
    - NoSQL dbs, datawarehousing, distributed file systems, log processing.
+## EC2 Storage Options
+### EBS
+* Volume types:
+    * SSD
+        * General purpose (default).
+        * Provisoned IOPS - latency sensitive transctional workloads.      
+    * HDD
+        * Throughput optimized - frequently accessed throughput intensive workloads, large data sets, large IO sizes.
+        * Cold HDD - lowest cost.
+### EFS
+
+### EFS
+### Instance storage
 ## Placement Groups
 3 strategies: Cluster; Partition; Spread
 ### Cluster Strategy
