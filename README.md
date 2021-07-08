@@ -2,7 +2,7 @@
 
 ## EC2
 ### Placement Groups
-3 strategies: Cluster; 
+3 strategies: Cluster; Partition; Spread
 #### Cluster Strategy
 * Places instances in the same AZ.
 * Low latency, high throughput.
