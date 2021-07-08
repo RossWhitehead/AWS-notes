@@ -20,7 +20,7 @@
 ### Instance Profiles and IAM Roles
 * Instance profiles allows an EC2 instance to assume a role on startup.
 * Can be applied to multiple instances.
-* How to use and instance profile:
+* How to use an instance profile:
   - Create a role with the EC2 service as a trusted entity.
   - Assign IAM role (instance profile) to EC2 instances when lauching.
 * How to change an EC2 instances role:
