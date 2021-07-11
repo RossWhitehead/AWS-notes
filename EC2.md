@@ -51,6 +51,7 @@
 * Physically attached to host computer.
 * Data is lost when instance terminates, but preserved during a reboot.
 * Instance store backed instances cannot be stopped or hibernated.
+
 ![](https://k2y3h8q6.stackpathcdn.com/wp-content/uploads/2018/12/AWS-Training-Amazon-EC2-3.jpg)
 ## Placement Groups
 3 strategies: Cluster; Partition; Spread
