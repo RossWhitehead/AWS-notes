@@ -1,5 +1,3 @@
-# AWS-notes
-
 # AWS Notes
 
 [AMIs and EBS Snapshots](./AMIs_and_EBS_Snapshots.md)
