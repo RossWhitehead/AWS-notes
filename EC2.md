@@ -80,3 +80,5 @@
   - Assign IAM role (instance profile) to EC2 instances when lauching.
 * How to change an EC2 instances role:
   - Actions -> Security -> Modify IAM Role
+
+## Reserved Instances
