@@ -1,5 +1,6 @@
 # Storage Gateway
 
+![Storage Gateway](https://d1.awsstatic.com/cloud-storage/product-page-diagram_AWS-Storage-Gateway_HIW%402x.6df96d96cdbaa61ed3ce935262431aabcfb9e52d.png)
 ## S3 File Gateway
 
 ![S3 File Gateway](https://docs.aws.amazon.com/filegateway/latest/files3/images/file-gateway-concepts-diagram.png)
