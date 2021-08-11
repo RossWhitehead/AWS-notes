@@ -23,6 +23,8 @@
 
 ## Volume Gateway
 
+![Volume Gateway](https://d1.awsstatic.com/cloud-storage/volume-gateway-diagram.eedd58ab3fb8a5dcae088622b5c1595dac21a04b.png)
+
 * Internet Small Computer System Interface (iSCSI) interface into S3.
 * The volume gateway is deployed into your on-premises environment as a VM running on VMware ESXi, Linux KVM, or Microsoft Hyper-V hypervisor.
 * Volume configurations:
