@@ -29,4 +29,41 @@
 
 ## ENIs
 * Virtual network card
+
+## PrivateLink
+
+![](https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/images/image20.png)
+
+* Private connectivity from VPCs to AWS hosted services.
+* Uses private IP addresses and security groups within an Amazon VPC so that services function as though they were hosted directly within an Amazon VPC.
+* Uses Network Load Balancers to connect interface endpoints to
+services.
+
+### VPC Endpoint
+
+* The entry point in your VPC that enables you to connect privately to a service.
+* A VPC Endpoint creates an elastic network interface in each subnet with a private IP address that serves as an entry point for traffic destined to the service.
+
+#### Interface Endpoint
+
+* An elastic network interface with a private IP address from the IP address range of your subnet.
+* Serves as an entry point for traffic destined to a supported AWS service or a VPC endpoint service.
+
+#### Gateway Load Balancer Endpoint
+
+* Entry point to intercept traffic and route it to a service that you've configured using Gateway Load Balancers.
+
+#### Gateway Endpoint
+
+* For DynamoDB and S3.
+* Targets specific IP routes in an Amazon VPC route table, in the form of a prefix-list.
+Service (Amazon S3). 
+* Gateway endpoints do not enable AWS PrivateLink
+
+
+### Endpoint service
+
+* Your own application or service in your VPC. Other AWS principals can create an endpoint from their VPC to your endpoint service.
+
+
  
