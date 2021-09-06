@@ -5,7 +5,6 @@
 * Elastically scales to accomodate changing volume of traffic.
 * Can be an internal load balancer or an internet-facing load balancer.
 
-
 ## Availability Zones and load balancer nodes
 
 * When you enable a AZ for a load balancer, a load balancer node is created in the AZ.
@@ -22,26 +21,44 @@
 
 * Cross-zone load balancing is always enabled for ALBs, and disbled by default for NLBs and GLBs.
 
-## Application Load Balancers
+## Application Load Balancer
 
 ![](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/images/component_architecture.png)
 
+* OSI Layer 7 (Application) load balancing.
 * Support following protocols on front-end connections: HTTP/0.9, HTTP/1.0, HTTP/1.1, HTTP/2.
+* Provide advanced routing and visibility features targeted at application architectures, including microservices and containers
 * Also supports HTTP to WebSockets connection upgrades.
 * Uses HTTP/1.1 on backend connections (load balancer to registered target) by default. However, you can use the protocol version to send the request to the targets using HTTP/2 or gRPC.
 * Automatically add X-Forwarded-For, X-Forwarded-Proto, and X-Forwarded-Port headers to the request.
+* Internet facing or internal.
 
 ### Listeners
 
 * You add one or more listeners to your load balancer.
-* A listener checks for connection requests from clients, using the protocol and port that you configure. 
-* The rules that you define for a listener determine how the load balancer routes requests to its registered targets. 
-* Each rule consists of a priority, one or more actions, and one or more conditions. 
-* When the conditions for a rule are met, then its actions are performed. 
+* A listener checks for connection requests from clients, using the protocol and port that you configure.
+* The rules that you define for a listener determine how the load balancer routes requests to its registered targets.
+* Each rule consists of a priority, one or more actions, and one or more conditions.
+* When the conditions for a rule are met, then its actions are performed.
 * You must define a default rule for each listener, and you can optionally define additional rules.
+* A rule can have one of the following actions:
+    * Forward to..
+    * Redirect to..
+    * Return fixed response.
+    * Authenticate (for HTTPS).
+        * Authenticate users through an identity provider (IdP) that is OpenID Connect (OIDC) compliant.* Authenticate users through social IdPs, such as Amazon, Facebook, or Google, through the user pools supported by Amazon Cognito.
+        * Authenticate users through corporate identities, using SAML, LDAP, or Microsoft AD, through the user pools supported by Amazon Cognito.
 
 ### Target Groups
 
 * Each target group routes requests to one or more registered targets, such as EC2 instances, using the protocol and port number that you specify. 
 * You can register a target with multiple target groups. 
 * You can configure health checks on a per target group basis. Health checks are performed on all targets registered to a target group that is specified in a listener rule for your load balancer.
+
+## Network Load Balancer
+
+* OSI Layer 4 (Transport) load balancing.
+* Internet facing or internal.
+* Ultra-high performance, TLS offloading at scale, centralized certificate deployment, support for UDP, and static IP addresses for your application.
+* Support following protocols on front-end connections: TCP, TCP_UDP, TLS, UDP.
+* Performs TLS offloading.
