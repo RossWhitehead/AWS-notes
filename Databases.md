@@ -28,6 +28,8 @@
 
 * Multi-AZ NoSQL.
 * Cross-region replication.
+    * Transactions are not supported across regions.
+    * Utilises DynamoDB Streams.
 * Eventual-consistency and strong-consistency options.
 * ACID transactions.
 * Each table has a primary key and an optional sort key (i.e. composite PK index).
@@ -51,3 +53,20 @@
     * Captures item-level changes in your table, and replicates the changes to a Kinesis data stream. You then can consume and manage the change information from Kinesis. Charges apply.
 * DynamoDB Streams
     * Capture item-level changes in your table, and push the changes to a DynamoDB stream. You then can access the change information through the DynamoDB Streams API.
+
+## ElastiCache
+
+* Memcached or Redis
+* Which to choose?
+    * Backup/Restore: Memcached = No, Redis = Yes.
+    * Replication: Memcached = No, Redis Cluster = Yes.
+    * Sharding: Memcached = Yes, Redis Cluster = Yes.
+
+## AWS Neptune
+
+* Graph DB
+
+## AWS DocumentDB
+
+* Document DB
+
