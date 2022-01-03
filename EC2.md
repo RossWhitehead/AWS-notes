@@ -82,7 +82,8 @@
   - Actions -> Security -> Modify IAM Role
 
 ## Reserved Instances
-* Purchase for a term.
+* Purchase for a term at lower cost than on-demand.
+* Guaranteed capacity.
 
 ## Spot Instances
 * You have the option to request Spot Instances and specify the maximum price you are willing to pay per instance hour. If you bid higher than the current Spot Price, your Spot Instance is launched and will be charged at the current Spot Price. Spot Prices often are significantly lower than On-Demand prices, so using Spot Instances for flexible, interruption-tolerant applications can lower your instance costs by up to 90%.
