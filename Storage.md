@@ -5,6 +5,7 @@
 * Designed for 99.5% to 99.99% availability.
 
 ### Limits
+
 * Each object, maximum of 5TB.
 * Single PUT is limited to 5GB.
 * Use muiltipart upload for objects > 100 MB.
@@ -47,6 +48,7 @@
 ### Intelligent-Tiering Archive configuration
 
 ### S3 Glacier
+
 * Files are stored as archives.
     * An archive can be up to 40TB.
 * Archives are grouped in vaults.
@@ -55,6 +57,7 @@
     * Vault Inventory Retrieval Job Complete.
 
 ### S3 Access Points
+
 * Access points are named network endpoints that are attached to buckets that you can use to perform S3 object operations.
 * Why?
     * Shared data sets
@@ -63,6 +66,24 @@
         * Between same-region access points.
     * Limit access to specific account IDs and VPCs
     * Provide a unique name within a region.
+
+### Encryption
+* Disabled by default
+* SSE-S3
+    * S3 managed keys
+    * Reduce the cost of SSE by up to 99% by decresing request traffic from S3 to KMS.
+* SSE-KMS
+    * KMS managed keys
+    * Choice between AWSKMS managed key (aws/s3) of a custiomer managed key.
+    * Why use a customer managed key:
+        *  You want to grant cross-account access to your S3 objects.
+        *  You want to create, rotate, diable or grant access policies for the key.     
+* To encrypt existing Amazon S3 objects use tghe Batch Operations Copy operation.
+
+
+### Access Analyzer for S3
+
+Alerts you to S3 buckets that are configured to allow access to anyone on the internet or other AWS accounts, including accounts outside of your organization.
 
 ## EFS
 
