@@ -1,10 +1,29 @@
 # Networking
 
+## VPCs and subnets
+
+![](https://docs.aws.amazon.com/vpc/latest/userguide/images/subnets-diagram.png)
+
+* Public subnet: 
+    * The subnet's IPv4 or IPv6 traffic is routed to an internet gateway or an egress-only internet gateway and can reach the public internet.
+    * If you have an EC2 instance launched into a public subnet and you want the instance to communicate with the internet, it must have a public IPv4 address (or an Elastic IP address) or an IPv6 address. 
+* Private subnet: The subnet’s IPv4 or IPv6 traffic is not routed to an internet gateway or egress-only internet gateway and cannot reach the public internet.
+* VPN-only subnet: The subnet doesn't have a route to the internet gateway, but it has its traffic routed to a virtual private gateway for a Site-to-Site VPN connection. Currently, does not support IPv6 traffic over a Site-to-Site VPN connection.
+
 ## IP Addressing
+
+The first four IP addresses and the last IP address in each subnet CIDR block are not available for you to use, and cannot be assigned to an instance. For example, in a subnet with CIDR block 10.0.0.0/24, the following five IP addresses are reserved:
+
+* 10.0.0.0: Network address.
+* 10.0.0.1: Reserved by AWS for the VPC router.
+* 10.0.0.2: Reserved by AWS. The IP address of the DNS server is the base of the VPC network range plus two. For VPCs with multiple CIDR blocks, the IP address of the DNS server is located in the primary CIDR. We also reserve the base of each subnet range plus two for all CIDR blocks in the VPC. For more information, see Amazon DNS server.
+* 10.0.0.3: Reserved by AWS for future use.
+* 10.0.0.255: Network broadcast address. We do not support broadcast in a VPC, therefore we reserve this address.
+
 
 ### Private IPv4 addresses and internal DNS hostnames
 * Private IP addresses are not reachable over the internet.
-* Each instance is allocate a primary private IPv4 address, and is given an internal DNS hostname that resolves to the primary private IPv4 address; e.g. ip-10-251-50-12.ec2.internal.
+* Each instance is allocated a primary private IPv4 address, and is given an internal DNS hostname that resolves to the primary private IPv4 address; e.g. ip-10-251-50-12.ec2.internal.
 * Each instance has a default network interface (eth0) that is assigned the primary private IPv4 address.
 * Multiple secondary private IPv4 and IPv6 addresses can be assigned to a network interface.
 
