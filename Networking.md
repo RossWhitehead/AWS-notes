@@ -49,6 +49,7 @@ The first four IP addresses and the last IP address in each subnet CIDR block ar
 ## Routing
 
 * A VPC has a primary and optionally multiple secondary CIDR block associations. For each CIDR block a route is automatically added to the VPC route tables to enable routing within the VPC.
+
 | Destination | Target |
 | ----------- | ------ |
 | 10.0.0.0/16 | local |
