@@ -70,12 +70,19 @@ services.
 ### VPC Endpoint
 
 * The entry point in your VPC that enables you to connect privately to a service.
+* Horizontally scaled, redundant, and highly available VPC components
 * A VPC Endpoint creates an elastic network interface in each subnet with a private IP address that serves as an entry point for traffic destined to the service.
 
 #### Interface Endpoint
 
-* An elastic network interface with a private IP address from the IP address range of your subnet.
-* Serves as an entry point for traffic destined to a supported AWS service or a VPC endpoint service.
+* Serves as an entry point for traffic destined to a supported AWS service (not DynamoDB or S3 - see below) or a VPC endpoint service.
+* Steps to create an interface endpoint:
+    * Select service (e.g. com.amazonaws.us-east-1.lambda).
+    * Select your VPC
+    * Choose subnets. An ENI gets created in each subnet.
+    * Specify one or more security groups to control traffic at the ENIs. 
+    * Create an enpoint policy to control access to the service (defaults to full access).
+    * ...
 
 #### Gateway Load Balancer Endpoint
 
@@ -87,7 +94,6 @@ services.
 * Targets specific IP routes in an Amazon VPC route table, in the form of a prefix-list.
 Service (Amazon S3). 
 * Gateway endpoints do not enable AWS PrivateLink
-
 
 ### Endpoint service
 
