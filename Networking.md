@@ -2,6 +2,15 @@
 
 ## VPCs and subnets
 
+### DNS Hostnames and DNS Resolution
+
+* DNS Hostnames:
+    * Determines whether the VPC supports assigning public DNS hostnames to instances with public IP addresses.
+    * Defaults to enabled for default VPC and disabled for additional VPCs.
+* DNS Resolution (DNS support):
+    * Determines whether the VPC supports DNS resolution through the Amazon provided DNS server (Amazon Route 53 Resolver server)
+    * Defaults to enabled.
+
 ![](https://docs.aws.amazon.com/vpc/latest/userguide/images/subnets-diagram.png)
 
 * Public subnet: 
@@ -58,31 +67,39 @@ The first four IP addresses and the last IP address in each subnet CIDR block ar
 ## ENIs
 * Virtual network card
 
+## VPC-Peering
+
+![](https://docs.aws.amazon.com/vpc/latest/peering/images/peering-intro-diagram.png)
+
+* A VPC peering connection is a networking connection between two VPCs that enables you to route traffic between them using private IPv4 addresses or IPv6 addresses.
+* Can be created for VPCs within different account or regions.
+* Requires non-overlapping CIDR ranges.
+* VPC Peering connections are not transitive.
+
+Steps to create a VPC Peering connction:
+1. Owner of the requester VPC sends a request to the owner of the accepter VPC.
+2. Owner of the accepter VPC accepts the VPC peering connection.
+3. For each VPC, add a route to one or more VPC route tables that points to the IP address range of the other VPC with the target being the VPC connection. 
+4. If required, update the security group rules that are associated with your instance to ensure that traffic to and from the peer VPC is not restricted.
+5. Enable DNS Resolution for your VPC connection. After enabling DNS resolution, if instances on either side of the VPC peering connection address each other using a public DNS hostname, the hostname resolves to the private IP address of the instance.
+
 ## PrivateLink
 
 ![](https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/images/image20.png)
 
 * Private connectivity from VPCs to AWS hosted services.
 * Uses private IP addresses and security groups within an Amazon VPC so that services function as though they were hosted directly within an Amazon VPC.
-* Uses Network Load Balancers to connect interface endpoints to
-services.
+* Uses Network Load Balancers to connect interface endpoints to services.
 
 ### VPC Endpoint
 
 * The entry point in your VPC that enables you to connect privately to a service.
-* Horizontally scaled, redundant, and highly available VPC components
 * A VPC Endpoint creates an elastic network interface in each subnet with a private IP address that serves as an entry point for traffic destined to the service.
 
 #### Interface Endpoint
 
-* Serves as an entry point for traffic destined to a supported AWS service (not DynamoDB or S3 - see below) or a VPC endpoint service.
-* Steps to create an interface endpoint:
-    * Select service (e.g. com.amazonaws.us-east-1.lambda).
-    * Select your VPC
-    * Choose subnets. An ENI gets created in each subnet.
-    * Specify one or more security groups to control traffic at the ENIs. 
-    * Create an enpoint policy to control access to the service (defaults to full access).
-    * ...
+* An elastic network interface with a private IP address from the IP address range of your subnet.
+* Serves as an entry point for traffic destined to a supported AWS service or a VPC endpoint service.
 
 #### Gateway Load Balancer Endpoint
 
@@ -94,6 +111,7 @@ services.
 * Targets specific IP routes in an Amazon VPC route table, in the form of a prefix-list.
 Service (Amazon S3). 
 * Gateway endpoints do not enable AWS PrivateLink
+
 
 ### Endpoint service
 
