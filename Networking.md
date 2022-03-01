@@ -103,7 +103,8 @@ Steps to create a VPC Peering connction:
 
 #### Gateway Load Balancer Endpoint
 
-* Entry point to intercept traffic and route it to a service that you've configured using Gateway Load Balancers.
+* A Gateway Loadbalancer endpoint provides private connectivity to third-party virtual appliances in the service provider VPC, such as firewalls, intrusion detection and prevention systems, and deep packet inspection systems.
+* A Gateway Load Balancer operates at the third layer of the OSI model. It listens for all IP packets across all ports and forwards traffic to the target group that's specified in the listener rule, using the GENEVE protocol on port 6081.
 
 #### Gateway Endpoint
 
