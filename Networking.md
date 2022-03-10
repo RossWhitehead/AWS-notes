@@ -113,10 +113,29 @@ Steps to create a VPC Peering connction:
 Service (Amazon S3). 
 * Gateway endpoints do not enable AWS PrivateLink
 
-
 ### Endpoint service
 
 * Your own application or service in your VPC. Other AWS principals can create an endpoint from their VPC to your endpoint service.
+
+## Transit Gateway
+
+A transit gateway is a network transit hub connecting:
+
+* VPCs
+* Connect SD-WAN/thrird-part network apliances
+* AWS Direct Connect gateways
+* Peering connections with other transit gateways
+* VPN connections transit gateways.
+
+### AZs
+
+Whe you attach a VPC to a transit gateway you must nominate one subnet per avaialability zone. The transit gateway places a network interface in each nominated subnet. Traffic can then be routed to all subnets in each avaialability zone, not just the specifc subnect.
+
+### Routing
+
+
+
+
 
 
 
