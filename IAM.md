@@ -2,7 +2,7 @@
 
 ## Root User
 
-### Securing
+### Securing the root user
 * Activate MFA for root user.
 * Delete root user access keys.
 * Create IAM users for administrators.
@@ -24,21 +24,28 @@
 * Sign up for GovCloud.
 * Close AWS account.
 
-## Permissions Boundary
-* Limits effective permisions of roles and users
-
 ## Policies
 ### Identity based policies
-* AWS Managed - common use cases
-* Customer Managed
+* Attached to a user, group or role.
+* Manged policies
+    * AWS Managed (common use cases), or Customer Managed
+    * Can be attached to multiple identities.
 * Inline policies
     * Embedded with the entity.
-    * Deleyed when entity is deleted.
-* Policies can be attached to Users or Groups.
+    * Deleted when entity is deleted.
 
 ### Resource based policies
 * Attached to a resource.
+* Not all AWS services support resource based policies. Typically used for S3, SQS, VPC endpoints, and KMS keys.
 * Can be used for cross-account access.
+
+### Cross-account Access
+* For requests made from one account to another, the requester in Account A must have:
+    * an identity-based policy that allows them to make a request to the resource in Account B. 
+    * Also, the resource-based policy in Account B must allow the requester in Account A to access the resource. 
+
+## AWS IAM Access Analyzer
+* AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, shared with an external entity. 
 
 ## Roles
 * AWS identity with name and policies.
