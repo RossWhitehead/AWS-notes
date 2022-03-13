@@ -31,8 +31,8 @@
     * AWS Managed (common use cases), or Customer Managed
     * Can be attached to multiple identities.
 * Inline policies
-    * Embedded with the entity.
-    * Deleted when entity is deleted.
+    * Embedded with the identity.
+    * Deleted when identity is deleted.
 
 ### Resource based policies
 * Attached to a resource.
