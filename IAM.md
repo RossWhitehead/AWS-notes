@@ -87,7 +87,9 @@
 * Add policy to group that allows members to assume the trusting account role.
 
 ## Cross-account access with resource based policies
-* With resource-based policies, you can specify who has access to the resource and what actions they can perform on it. 
+* For some AWS services, you can grant cross-account access to your resources. To do this, you attach a policy directly to the resource that you want to share, instead of using a role as a proxy. The resource that you want to share must support resource-based policies. Unlike an identity-based policy, a resource-based policy specifies who (which principal) can access that resource.
+* Advantage over cross-account access with a role:
+    * Principle still works in yhe trusted account and does not give up their permissions - useful for copying information between accounts.
 
 ### IAM Access Analyzer
 * AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity.
