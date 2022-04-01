@@ -48,15 +48,14 @@
 * AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, shared with an external entity. 
 
 ## Roles
-* AWS identity with name and policies.
-* No credentials.
-* For temporary delegated access to trusted entities.
-![](./images/roll-trusted-entities.png)
+* A Role is an IAM identity with specific permissions.
+* For delegating access to users, applications, or services that don;t normally have access to your AWS resources.
 * IAM Role scenarios:
-  * One AWS service accesses another AWS service.
-  * One AWS account accesses another AWS account.
-  * A third-party web identity needs access.
-  * Authentication using SAML2.0 federation.
+  * Provide access across AWS accounts.
+  * Provide access to 3rd-party accounts
+  * Provide access to AWS services 
+      * Many AWS services require that you use roles to control what that service can access. 
+  * Provide access to externally authenticated users.
 * When a user assumes a role, they temporarily given up their own permissions.
 * An entity must be granted permissions to assume a role.
 ```json
