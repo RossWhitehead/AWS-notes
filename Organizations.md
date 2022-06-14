@@ -38,3 +38,10 @@
     * Require MFA for certain actions.
     * Require specific tags when creating resources.
 
+## Tag Policies
+
+* Maintain consistent tags across the organization.
+* e.g. A tag policy can specify that when the CostCenter tag is attached to a resource
+* A tag policy can also specify that noncompliant tagging operations on specified resource types are enforced. In other words, noncompliant tagging requests on specified resource types are prevented from completing.
+* 
+
