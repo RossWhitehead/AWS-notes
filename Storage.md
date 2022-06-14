@@ -87,6 +87,8 @@ Alerts you to S3 buckets that are configured to allow access to anyone on the in
 
 ## EFS
 
+* Scalable file storage for multiple EC2 instances
+* Totally elastic – once you’ve spun up an EFS instance, you can add add files without worrying about provisioning or disturbing your application’s performance.
 * NFS compatible.
 * Mount to EC2 or on-prem Linux server over DirectConnect.
 * Can be accessed by multiple EC2 instances within a VPC.
@@ -114,7 +116,13 @@ Alerts you to S3 buckets that are configured to allow access to anyone on the in
         * Max throughput.
         * For applications with high throuput to storage (e.g. web server or CMS).
 
-# FSx
+## FSx
 
 * Windows File System compatible.
+
+## EBS
+
+* High performance, low latency, per instance block storage 
+* In special cases, Amazon EBS Multi-Attach can turn EBS into multi-instance storage, like EFS.
+* Either General Purpose SSD (for general use) or Provisioned IOPS SSD, for mission-critical workloads.
 
