@@ -55,6 +55,11 @@ The first four IP addresses and the last IP address in each subnet CIDR block ar
 * Globally unique and reachable over the internet.
 * VPC and subnet sizing for IPv6 = /56 and /64.
 
+### VPC Flow Logs
+
+* A flow log enables you to capture information about the IP traffic going to and from network interfaces in your VPC. 
+* Published to Amazon CloudWatch Logs or Amazon S3. 
+
 ## Routing
 
 * A VPC has a primary and optionally multiple secondary CIDR block associations. For each CIDR block a route is automatically added to the VPC route tables to enable routing within the VPC.
