@@ -4,7 +4,7 @@
 
 AWS SQS is a serverless queue-oriented event broker.
 
-When a message is written to a SQL topic, it is persisted to multiple servers and AZs to ensure redundancy and availability.
+When a message is written to a SQS topic, it is persisted to multiple servers and AZs to ensure redundancy and availability.
 
 SQS does not directly support fan-out use cases as each message can only be processed by a single consumer. However fan-out can be achieved through a combination of SQS and SNS.
 
