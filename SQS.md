@@ -18,7 +18,7 @@ Standard queue offer at-least-once delivery and best-effort ordering, so no orde
 
 Standard queues support a nearly unlimited number of API calls per second, per API action (SendMessage, ReceiveMessage, or DeleteMessage).
 
-When a standard queue is created it is configured with the following settings:
+A standard queue is created with the following configuration settings:
 
 ![](./images/SQS_config_standard.png)
 
@@ -57,7 +57,7 @@ Messages that have not been deleted by a consumer will be automatically deleted 
 
 FIFO queues offer exactly-once processing and first-in-first-out ordering guarantee. These guarantees come with a cost of a limit to throughput of 3000 messages per second.
 
-When a standard queue is created it is configured with the following settings:
+A FIFO queue is created with the following configuration settings:
 
 ![](./images/SQS_config_FIFO.png)
 
