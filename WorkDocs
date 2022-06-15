@@ -1,0 +1,10 @@
+# Amazon WorkDocs
+
+* Fully managed, secure enterprise storage and sharing service
+* User's files are only visible to them, and their designated contributors and viewers. 
+* Other members of your organization do not have access to other user's files unless they are specifically granted access.
+
+* Client Applications:
+    * A web application used for document management and reviewing.
+    * Native apps for mobile devices used for document review.
+    * Amazon WorkDocs Drive used to synchronize a folder on your Mac or Windows desktop with your Amazon WorkDocs files.
