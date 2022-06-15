@@ -1,0 +1,26 @@
+# AWS Directory Services
+
+## AWS Managed Microsoft AD
+
+* Fully managed Microsoft Active Directory in the cloud. 
+
+## AD Connector
+
+* Allow your on-premises users to log in to AWS applications and services with their Active Directory credentials. 
+* Join Amazon EC2 instances to your existing Active Directory domain.
+* Connector redirects AD requests to on-premise.
+* AD Connectors and your on-premises AD domains have a 1-to-1 relationship. That is, for each on-premises domain, including child domains in an AD forest that you want to authenticate against, you must create a unique AD Connector.
+* AD Connector cannot be shared with other AWS accounts. If this is a requirement, consider using AWS Managed Microsoft AD to Share your directory. 
+* AD Connector is also not multi-VPC aware, which means that AWS applications like WorkSpaces are required to be provisioned into the same VPC as your AD Connector.
+
+## Simple AD
+
+* Low-cost directory with basic Active Directory compatibility.
+* Supports Samba 4–compatible applications, or you need LDAP compatibility for LDAP-aware applications.
+* Two sizes:
+    * Small - Supports up to 500 users (approximately 2,000 objects including users, groups, and computers).
+    * Large - Supports up to 5,000 users (approximately 20,000 objects including users, groups, and computers).
+
+## Cognito
+
+* If you develop high-scale SaaS applications and need a scalable directory to manage and authenticate your subscribers and that works with social media identities.
