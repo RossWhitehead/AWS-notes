@@ -28,10 +28,13 @@
 
 * Multi-AZ NoSQL.
 * Cross-region replication.
-    * Transactions are not supported across regions.
     * Utilises DynamoDB Streams.
 * Eventual-consistency and strong-consistency options.
-* ACID transactions.
+* ACID transaction.
+    * Within a region.
+    * Serializable or read-commited depending on operation.
+        * Serializable: DeleteItem, PutItem, UpdateItem, GetItem
+        * Read-committed: BatchGetItem, BatchWriteItem, Query, Scan.    
 * Each table has a primary key and an optional sort key (i.e. composite PK index).
 * Can have many secondary indexes.
 
@@ -47,12 +50,15 @@
 
  * Amazon DynamoDB Accelerator (DAX) is a fully-managed, highly-available, in-memory caching service for DynamoDB.
 
-### Streaming
+### DynamoDB Streams
+
+![](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/images/HowItWorksStreams.png)
 
 * Amazon Kinesis Data Streams for DynamoDB
     * Captures item-level changes in your table, and replicates the changes to a Kinesis data stream. You then can consume and manage the change information from Kinesis. Charges apply.
 * DynamoDB Streams
-    * Capture item-level changes in your table, and push the changes to a DynamoDB stream. You then can access the change information through the DynamoDB Streams API.
+    * DynamoDB Streams captures a time-ordered sequence of item-level modifications in any DynamoDB table and stores this information in a log for up to 24 hours. 
+    * API for reading streams is exposed on it's own endpoint.
 
 ## ElastiCache
 
