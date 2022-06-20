@@ -126,3 +126,8 @@ Alerts you to S3 buckets that are configured to allow access to anyone on the in
 * In special cases, Amazon EBS Multi-Attach can turn EBS into multi-instance storage, like EFS.
 * Either General Purpose SSD (for general use) or Provisioned IOPS SSD, for mission-critical workloads.
 
+### EBS Snapshots
+
+* Snapshots are incremental backups to S3.
+* Amazon Data Lifecycle Manager can be used to manage snapshots.
+
