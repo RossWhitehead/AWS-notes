@@ -1,20 +1,26 @@
 # EC2
 ## Instance Types
 * General purpose
-   - Similar CPU, RAM, and network.
-   - Lowest cost.
+   - A a balance of compute, memory and networking resources.
+   - Low cost.
+   - Good for web servers and code repositories.
+   - e.g. **T3**: offer burstable performance. Baseline CPU with ability to burst above that on demand.
 * Compute optimized
-   - Higher CPU performance.
+   - High CPU performance.
    - Scientific modelling, Ad serving, Video encoding.
+   - e.g. **C4**
 * Memory optimized
    - Large in-memory datasets.
    - High performance databases, distributed in-memory caches, big data analytics.
+   - e.g. **R6g**
 * Acceleated computing
    - Hardware accelerators like GPUs and FPGAs.
    - Machine and deep learning, advanced anaytics, graphics workloads, genomics.
+   - e.g. **P4**
 * Storage optimized
    - High I/O to large local data sets.
    - NoSQL dbs, datawarehousing, distributed file systems, log processing.
+   - e.g. **I3**
 ## EC2 Storage Options
 ### EBS
 * Volume types:
