@@ -43,5 +43,12 @@
 * Maintain consistent tags across the organization.
 * e.g. A tag policy can specify that when the CostCenter tag is attached to a resource
 * A tag policy can also specify that noncompliant tagging operations on specified resource types are enforced. In other words, noncompliant tagging requests on specified resource types are prevented from completing.
-* 
+
+## Consolidated Billing
+
+* One bill for all member accounts combined.
+* Can combine the usage across all accounts in the organization to share:
+    * Volume pricing discounts (AWS Data Transfer and S3)
+    * Reserved Instance discounts (all accounts can receive the hourly cost benefit of Reserved Instances that are purchased by any other account)
+    * Savings Plans.
 
