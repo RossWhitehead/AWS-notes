@@ -46,20 +46,29 @@
         * Fail to terminate
 * Lifecyle Hooks
     * Lifecycle hooks enable an Auto Scaling group to be aware of events in the Auto Scaling instance lifecycle, and then perform a custom action when the corresponding lifecycle event occurs. A lifecycle hook provides a specified amount of time (one hour by default) to complete the custom action before the instance transitions to the next state.
+
 ### Launch Configuration 
 
 * Note. AWS strongly recommend using Launch Templates instead of Launch Configurations.
 
-* AMI
-* Instance Type,
-* Additional Configuration:
-    * Request spot instances.
-    * IAM profile
-    * User data, etc.
-* Storage
-* Security groups
-* Key pair (login)
-
 ### Launch Templates
 
-* A launch template is similar to a launch configuration, in that it specifies instance configuration information. However, defining a launch template instead of a launch configuration allows you to have multiple versions of a launch template.
+* A launch template is similar to a launch configuration, in that it specifies instance configuration information. 
+* Unlike launch configurations, launch templates are versioned.
+
+### Creating a Launch Template
+
+Requires the following comfiguration:
+
+* AMI
+* Instance type
+* Key Pair (login)
+* Subnet (in which to locate ENI)
+* Security Group
+* Network Interfaces
+* EBS Volumes
+
+
+What happens if you don't specify Instance Type, Key Pair, Subnet, Network Interface,  
+
+
