@@ -87,20 +87,6 @@
 * How to change an EC2 instances role:
   - Actions -> Security -> Modify IAM Role
 
-## Reserved Instances
-* Purchase for a term at lower cost than on-demand.
-* Guaranteed capacity.
-
-## Spot Instances
-* You have the option to request Spot Instances and specify the maximum price you are willing to pay per instance hour. If you bid higher than the current Spot Price, your Spot Instance is launched and will be charged at the current Spot Price. Spot Prices often are significantly lower than On-Demand prices, so using Spot Instances for flexible, interruption-tolerant applications can lower your instance costs by up to 90%.
-* Capacity that can be terminated by AWS if required elsewhere.
-* Requesting spot instances:
-    * Place a bid by entering a "Maximum price".
-    * Persistence request? 
-        * If yes, will continue re-launch after termination.
-    * Select launch group.
-    * Enter valid to datetime.
-
 ## Auto-Scaling Groups
 
 ![](https://docs.aws.amazon.com/autoscaling/ec2/userguide/images/sample-3-tier-architecture-with-azs-diagram.png)
