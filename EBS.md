@@ -9,6 +9,10 @@
     * Data stored at rest on the volume, disk I/O, and snapshots created from the volume are all encrypted. 
 * EBS Multi-Attach:
     * Enables you to attach a single Provisioned IOPS SSD (io1 or io2) volume to multiple instances that are in the same Availability Zone. 
+* Recommended for:
+    * data that must be quickly accessible and requires long-term persistence. 
+    * particularly well-suited for use as the primary storage for file systems, databases, or for any applications that require fine granular updates and access to raw, unformatted, block-level storage. 
+
 
 ## EBS Volume Types
 
@@ -36,3 +40,15 @@
     * When you copy a snapshot, you can encrypt the copy or you can specify a KMS key that is different than the original.
 * Amazon Data Lifecycle Manager
     * Automate the creation, retention, and deletion of EBS snapshots and EBS-backed AMIs.
+
+## RAID on EBS
+
+* RAID is an OS concept. Create and attcah multiple EBS volumes, then configure RAID on the OS.
+* RAID 0
+    * Disk striping. Spit across disks.
+    * Provide greater read and write performance.
+* RAID 1
+    * Mirroring
+    * Offers redundancy and fault tolerance.
+    * Offers slower write speeds but could offer the same read performance as RAID 0 if the RAID controller uses multiplexing to read data from disks. 
+
