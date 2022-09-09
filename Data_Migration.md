@@ -3,14 +3,19 @@
 ## Data Pipeline
 
 ## Database Migration Services
-* Create a Replication Instance
-    * Choose a EC2 instance from the dms instance class.
-    * Allocate storage
-    * Choose a VPC
-    * Single or Multi-AZ if require a standby instance for HA.
-* Create source and destination Endpoints
-    * Aurora, DynamoDB, SQL Server, S3, etc.
-* Create database migratin Tasks.
+
+* A cloud service that makes it easy to migrate relational databases, data warehouses, NoSQL databases, and other types of data stores.
+* If you want to migrate to a different database engine, you can use the AWS Schema Conversion Tool (AWS SCT) to translate your database schema to the new platform.
+* Can be used for continuous replication (CDC)
+* How to: 
+    * Create a Replication Instance
+        * Choose a EC2 instance from the dms instance class.
+        * Allocate storage
+        * Choose a VPC
+        * Single or Multi-AZ if require a standby instance for HA.
+    * Create source and destination Endpoints
+        * Aurora, DynamoDB, SQL Server, S3, etc.
+    * Create database migration Tasks.
 
 ### Performance Considerations
 * Resource availability on the source.
