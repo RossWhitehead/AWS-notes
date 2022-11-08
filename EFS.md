@@ -32,3 +32,26 @@
 ## FSx
 
 * Windows File System compatible.
+
+
+### EFS
+* Manged NFS file system.
+* Highly available - multi-AZ redundancy within a region.
+* Auto-scalling - pay for what you use.
+* Multiple instances can access the file system - great for shared files.
+* Storage classes
+    * Standard
+    * Standard-IA (Infrequent Access)
+    * One-Zone
+    * One-Zone-IA (Infrequent Access)
+* Lifecyle management - files can be automatically moved from Standard to Infrequent Access storage classes after a configured time since last access (0-90 days).
+* Performanace modes:
+    * General purpose
+        * Latency-sensitive use cases, such as web servers and CMS.
+    * Max I/O
+        * High levels of and IOPS. Massive concurrent Access.
+* Throughput modes:
+    * Bursting
+        * Scales with size of file system. Can burst to burst to 100 MiB/s.
+    * Provisoned
+        * For applications with high throughput to storage (MiB/s per TiB) ratios, or with requirements greater than those allowed by the Bursting Throughput mode.
