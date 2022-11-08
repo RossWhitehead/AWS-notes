@@ -54,3 +54,9 @@
     * Offers redundancy and fault tolerance.
     * Offers slower write speeds but could offer the same read performance as RAID 0 if the RAID controller uses multiplexing to read data from disks. 
 
+### Instance storage
+* Temporary block-level storage.
+* Physically attached to host computer.
+* Data is lost when instance terminates, but preserved during a reboot.
+* Instance store backed instances cannot be stopped or hibernated.
+* 
