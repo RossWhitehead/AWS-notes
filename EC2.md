@@ -152,3 +152,8 @@
 ### Launch Templates
 
 * A launch template is similar to a launch configuration, in that it specifies instance configuration information. However, defining a launch template instead of a launch configuration allows you to have multiple versions of a launch template.
+
+### AMIs
+
+#### How tro copy to other regions
+#### How to share across accounts
