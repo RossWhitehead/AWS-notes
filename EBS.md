@@ -19,10 +19,12 @@
 * General Purpose SSD (gp2 and gp3):
     * Balance price and performance.
     * Ideal for boot volumes, medium-size single instance databases, and development and test environments.
+    * Max IOPs/volume = 16,000
 * Provisioned IOPS SSD (io1 ans io2):
     * I/O-intensive workloads that are sensitive to storage performance and consistency.
     * Provide a consistent IOPS rate that you specify when you create the volume.
     * High volume durability.
+    * Max IOPs/volume = 64,000
 * Throughput Optimized HDD (st1):
     * Low-cost magnetic storage that defines performance in terms of throughput rather than IOPS. 
     * Ideal for large, sequential workloads such as Amazon EMR, ETL, data warehouses, and log processing. 
