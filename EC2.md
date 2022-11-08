@@ -25,8 +25,8 @@
 ### EBS
 * Volume types:
     * SSD
-        * General purpose (default).
-        * Provisoned IOPS - latency sensitive transctional workloads.
+        * General purpose (default) - max IOPS/volume = 16,000
+        * Provisoned IOPS - high performance latency sensitive transctional workloads - max IOPS/volume = 64,000
     * HDD
         * Throughput optimized - frequently accessed throughput intensive workloads, large data sets, large IO sizes.
         * Cold HDD - lowest cost.
@@ -57,6 +57,8 @@
 * Physically attached to host computer.
 * Data is lost when instance terminates, but preserved during a reboot.
 * Instance store backed instances cannot be stopped or hibernated.
+
+### Snaphots
 
 ![](https://k2y3h8q6.stackpathcdn.com/wp-content/uploads/2018/12/AWS-Training-Amazon-EC2-3.jpg)
 ## Placement Groups
