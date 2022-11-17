@@ -5,7 +5,12 @@ Domain registration, DNS routing, and health checking.
 ## Hosted Zones
 
 * A hosted zone is a container that holds information about how you want to route traffic for a domain, such as example.com, and its subdomains.
-* Can be public (how to route internet traffic to the domain) or private (how to respond to DNS queries for a domain and its subdomains within one or more VPCs)
+* Types: 
+    * Public (how to route internet traffic to the domain)
+    * Private (how to respond to DNS queries for a domain and its subdomains within one or more VPCs)
+* To use a private hosted zone, the following VPC settings must be set to true:
+    * enableDnsHpstnames - determines whether instances launched in the VPC receive public DNS hostnames that correspond to their public IP addresses.
+    * enableDnsSupport (Resolution) - determines whether DNS resolution through the Amazon DNS server is supported for the VPC.
 * Each hosted zone has records defining how traffic should be routed. 
     * NS (name server)
         * Identifies the four name servers that you give to your registrar or your DNS service so that DNS queries are routed to Route 53 name servers.
