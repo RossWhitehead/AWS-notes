@@ -39,11 +39,6 @@
 * Not all AWS services support resource based policies. Typically used for S3, SQS, VPC endpoints, and KMS keys.
 * Can be used for cross-account access.
 
-### Cross-account Access
-* For requests made from one account to another, the requester in Account A must have:
-    * an identity-based policy that allows them to make a request to the resource in Account B. 
-    * Also, the resource-based policy in Account B must allow the requester in Account A to access the resource. 
-
 ## AWS IAM Access Analyzer
 * AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, shared with an external entity. 
 
@@ -80,11 +75,12 @@
 ## Cross-account access with roles
 ### Trusting Account (e.g. Production account)
 * Create role in trusting account to allow access to users from the trusted account.
-* The role will have relevant policies attached.
+* The role will have relevant permission policies attached.
+* Provide role ARN to trusted account users.
 ### Trusted Account (e.g. Security account)
 * Create group in trusted account.
 * Add trusted users to group.
-* Add policy to group that allows members to assume the trusting account role.
+* Add inline policy to group that allows members to assume the trusting account role.
 
 ## Cross-account access with resource based policies
 * For some AWS services, you can grant cross-account access to your resources. To do this, you attach a policy directly to the resource that you want to share, instead of using a role as a proxy. The resource that you want to share must support resource-based policies. Unlike an identity-based policy, a resource-based policy specifies who (which principal) can access that resource.
