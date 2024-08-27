@@ -15,8 +15,8 @@
 
 ## Use Cases
 
-* Accelerate static website content delivery.
-    * S3 origin.
+* Accelerate static website content delivery (e.g. images, style sheets, and JavaScript)
+    * S3 origin or a HTTP server
     * Can use Origin Access Identity (OAI) to easily restrict access to your S3 content.
 * Serve video on demand or live streaming video.
 
