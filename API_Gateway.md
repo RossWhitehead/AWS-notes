@@ -1,10 +1,18 @@
 # API Gateway
 
-* To build RESTful APIs, you can use either HTTP APIs or REST APIs from API Gateway. REST APIs offer a wide variety of features for building and managing RESTful APIs. HTTP APIs are up to 71% cheaper compared to REST APIs, but offer only API proxy functionality. HTTP APIs are optimized for performance—they offer the core functionality of API Gateway at a lower price.
-* API Endpoint Types:
-    * Regional
-    * Edge Optimized (CloudFront)
-    * Private.
+* Amazon API Gateway is an AWS service for creating, publishing, maintaining, monitoring, and securing REST, HTTP, and WebSocket APIs
+* REST vs HTTP APIs
+   * REST APIs and HTTP APIs are both RESTful API products. REST APIs support more features than HTTP APIs, while HTTP APIs are designed with minimal features so that they can be offered at a lower price.
+   * Choose REST APIs if you need features such as API keys, per-client throttling, request validation, AWS WAF integration, or private API endpoints.
+   * Choose HTTP APIs if you don't need the features included with REST APIs.
+* Endpoint Types
+    * Regional 
+    * Edge Optimized (CloudFront, REST only)
+    * Private (REST only)
+* Security
+    * Mutual TLS authentication
+    * Certificates for backend authentication (REST only)
+    * AWS WAF (REST only)
 * Deployments and Stages
     * Deployments expose APIs to users.
     * Deployments are associated with stages (e.g. Dev, Prod).
