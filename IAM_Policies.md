@@ -9,10 +9,9 @@ The evaluation logic for a request follows these rules:
 *    If a permissions boundary, Organizations SCP, or session policy is present, it might override the allow with an implicit deny.
 *    An explicit deny in any policy overrides any allows.
 
-
 ### Identity based policies
 * Attached to a user, group or role.
-* Manged policies
+* Managed policies
     * AWS Managed (common use cases), or Customer Managed
     * Can be attached to multiple identities.
 * Inline policies
@@ -23,3 +22,52 @@ The evaluation logic for a request follows these rules:
 * Attached to a resource.
 * Not all AWS services support resource based policies. Typically used for S3, SQS, VPC endpoints, and KMS keys.
 * Can be used for cross-account access.
+* 
+
+### Permission boundaries
+
+### Organisation Service Control Policies (SCPs)
+
+### Policy Simulator
+
+* Policy Simulator tool enables testing access for principles based on their assigned policies and permission boundaries.
+
+### Example policies
+
+#### AdministratorAccess
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "*",
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+#### AmazonS3ReadOnlyAccess
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:Get*",
+                "s3:List*",
+                "s3:Describe*",
+                "s3-object-lambda:Get*",
+                "s3-object-lambda:List*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+
