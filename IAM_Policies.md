@@ -64,7 +64,12 @@ The evaluation logic for a request follows these rules:
                 "s3-object-lambda:Get*",
                 "s3-object-lambda:List*"
             ],
-            "Resource": "*"
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:RequestedRegion": "eu-central-1"
+                }
+            }
         }
     ]
 }
