@@ -3,10 +3,10 @@
 
 * Centralised management of accounts
 * Consolidated billing
-* Hierarchical grouping
+* OUs provide hierarchical grouping 
 * Service Control Polices (SCP) associated with accounts or OUs.
-* Tag policies.
-* AI services opt-out policies
+* Tag policies, standardising requirements for tagging across accounts
+* AI and machine learning services data-cllection opt-out 
 * Backup policies
 * Account level IAM policies
 
