@@ -1,13 +1,15 @@
 # AWS Glue
 
-* Fully managed serverless ETL (extract, transform, and load) service 
-* Consists of:
-    * ETL jobs
-    * Data catalog
-    * Glue Studio
-    * Data quality
-    * DataBrew
-* Use cases:
+Fully managed serverless ETL (extract, transform, and load) service 
+
+Consists of:
+* ETL jobs
+* Data catalog
+* Glue Studio
+* Data quality
+* DataBrew
+
+Use cases:
 ![](https://s3.amazonaws.com/media.whizlabs.com/learn/2019/04/04/ckeditor_2.png)
 * Q: When should I use AWS Glue vs. Amazon EMR?
     * AWS Glue works on top of the Apache Spark environment to provide a scale-out execution environment for your data transformation jobs. AWS Glue infers, evolves, and monitors your ETL jobs to greatly simplify the process of creating and maintaining jobs. Amazon EMR provides you with direct access to your Hadoop environment, affording you lower-level access and greater flexibility in using tools beyond Spark.
