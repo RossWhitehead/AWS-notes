@@ -1,10 +1,12 @@
 # AWS Glue
 
-* Fully managed ETL (extract, transform, and load) service that makes it simple and cost-effective to categorize your data, clean it, enrich it, and move it reliably between various data stores and data streams.
+* Fully managed serverless ETL (extract, transform, and load) service 
 * Consists of:
-    * a central metadata repository known as the AWS Glue Data Catalog, 
-    * an ETL engine that automatically generates Python or Scala code, 
-    * and a flexible scheduler that handles dependency resolution, job monitoring, and retries.
+    * ETL jobs
+    * Data catalog
+    * Glue Studio
+    * Data quality
+    * DataBrew
 * Use cases:
 ![](https://s3.amazonaws.com/media.whizlabs.com/learn/2019/04/04/ckeditor_2.png)
 * Q: When should I use AWS Glue vs. Amazon EMR?
