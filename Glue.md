@@ -3,11 +3,17 @@
 Fully managed serverless ETL (extract, transform, and load) service 
 
 Consists of:
+* Data catalog 
+    * A metadata store containing table definitions, job definitions, and other control information for your ETL workflows.
+* Crawlers
+    * Programs that connect to data sources, infer data schemas, and create metadata table definitions in the Data Catalog.
 * ETL jobs
+   * The business logic to extract data from sources, transform it using Apache Spark scripts, and load it into targets.  
    * Multiple data sources, including S3, DynamoDB, and RDS
    * Build ETL jobs using Python Shell, Glue Streaming, and Cloud Studio
-   * Choice of engines: Spark and Ray 
-* Data catalog
+   * Choice of engines: Spark and Ray
+* Triggers
+    * Initiate job runs based on schedules or events  
 * Glue Studio
 * Data quality
 * DataBrew
